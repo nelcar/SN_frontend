@@ -1,0 +1,65 @@
+<div ng-controller="HomeController">
+    <h1 class = "tamano-titulo">{{titleObject.text}}</h1>
+    <div class="row">
+        <input type="button" class="btn btn-warning" ng-click="getOffers()" value="Ver todas las Ofertas!" ng-show="isAdmin()">
+    </div>
+    <br>
+    <br>
+    <div class="row" ng-show="isAdmin()">
+        <label for="Titulo">Título: </label>
+        <input type="text" name="Titulo" ng-model="offer.titulo">
+        <br>
+        <label for="Descripcion">Descripción: </label>
+        <input type="text" name="Descripcion" ng-model="offer.descripcion">
+        <br>
+        <label for="Cargo">Cargo a desempeñar: </label>
+        <input type="text" name="Cargo" ng-model="offer.cargo">
+        <br>
+        <label for="Informacion">Información: </label>
+        <input type="text" name="Informacion" ng-model="offer.informacion">
+        <br>
+        <label for="Salario">Salario: </label>
+        <input type="text" name="Salario" ng-model="offer.salario">
+        <br>
+        <input type="button" class="btn btn-primary" ng-click="postOffers()" value="Post to /offers!">
+    </div>
+    <div ng-show="isAdmin()">
+      <table class="table table-striped">
+        <tr>
+          <th>
+            Título
+          </th>
+          <th>
+            Descripción
+          </th>
+          <th>
+            Cargo a desempeñar
+          </th>
+          <th>
+            Información Contacto
+          </th>
+          <th>
+            Salario Anual
+          </th>
+        </tr>
+        <tr ng-repeat="offer in offers">
+          <td>
+            {{offer.titulo}}
+          </td>
+          <td>
+            {{offer.descripcion}}
+          </td>
+          <td>
+            {{offer.cargo}}
+          </td>
+          <td>
+            {{offer.informacion}}
+          </td>
+          <td>
+            {{offer.salario}}
+          </td>
+
+        </tr>
+      </table>
+    </div>
+</div>

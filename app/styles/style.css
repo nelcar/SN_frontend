@@ -1,0 +1,9 @@
+body{
+  background-image: url("../images/fondo.png");;
+}
+
+.tamano-titulo{
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Angular JS Scaffold app.</title>
+    <title>Red Social</title>
     <!-- inject:css -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- endinject -->
@@ -18,12 +18,12 @@
           <div class="navbar-header pull-right">
             <form class="navbar-form navbar-right" role="search">
               <div class="form-group" ng-show="!$sessionStorage.currentUser">
-                <input type="text" class="form-control" placeholder="username" ng-model="user.username">
-                <input type="password" class="form-control" placeholder="password" ng-model="user.password">
-                <button type="submit" class="btn btn-success" ng-click="login(user)">Log in</button>
+                <input type="text" class="form-control" placeholder="Nombre de Usuario" ng-model="user.username">
+                <input type="password" class="form-control" placeholder="Contraseña" ng-model="user.password">
+                <button type="submit" class="btn btn-success" ng-click="login(user)">Iniciar Sesion</button>
               </div>
               <div class="row">
-                  <button type="submit" class="btn btn-danger" ng-click="logout()" ng-show="$sessionStorage.currentUser">Log out</button>
+                  <button type="submit" class="btn btn-danger" ng-click="logout()" ng-show="$sessionStorage.currentUser">Cerrar Sesion</button>
               </div>
             </form>
           </div>

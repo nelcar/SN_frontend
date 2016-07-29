@@ -1,7 +1,7 @@
 angular.module('AngularScaffold.Controllers')
   .controller('HomeController', ['$scope', 'HomeService', '$sessionStorage', function ($scope, HomeService, $sessionStorage) {
     	$scope.title = "Tabla de Ofertas"
-      $scope.titleObject = {text: "Bienvenidos a Facebook JOBS"}
+      $scope.titleObject = {text: "Bienvenidos a .."}
       $scope.offers = [];
       $scope.offer = {};
 
